@@ -3,7 +3,15 @@
 </template>
 
 <script>
+  import "./utils/storage"
 
+  export default {
+    name: 'app',
+    mounted() {
+      //this.$storage.setItem('userInfo', {age: 30, name: 'jacl'}) // 經過封裝過後，值的部分就可以直接輸入一般的物件，而原來的不好用且格式還有輸入錯誤的風險
+      this.$storage.clearAll()
+    }
+  }
 </script>
 
 
